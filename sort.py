@@ -3,18 +3,6 @@ from time import ctime
 
 i = 0
 
-def sort_files(files, files_dates):
-    j = h = 0
-    files_and_dates = []
-    dates = []
-    for file in files:
-        files_and_dates.append(f"{file}-{files_dates[j]}")
-        j+=1
-
-    dates.append([int(float(f.split("-")[-1])) for f in files_and_dates])
-
-    sorted_dates = sorted(dates[0])
-
 def add_desc():
     paths = list()
     for path in os.listdir("./"):
